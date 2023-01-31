@@ -40,7 +40,8 @@ Instead of  "update", type name: update and on next line type updateDelay: (the 
 If there is a loop defined, it will ends its cycle, before the update animation runs.
 
 Loop animation<br>
-If you want a loop animation, you can make your loop as part of your timeline, just like play, stop, etc. Then right after play, the loop will start until stop is called. If you have a loop defined, and and you don't have need a have a update marker, the template will update when the loop plays. If stop is called, the loop will finish its cycle before the stop animation. <br>It is also possible to have a break between each loop, but then the format should look like update:<br>
+If you want a loop animation, you can make your loop as part of your timeline, just like play, stop, etc.<br>![loop](https://user-images.githubusercontent.com/61490904/215852678-5abe4d43-8071-4fe2-be25-a5ef33b26059.gif)
+<br> Then right after play, the loop will start until stop is called. If you have a loop defined, and and you don't have need a have a update marker, the template will update when the loop plays. If stop is called, the loop will finish its cycle before the stop animation. <br>It is also possible to have a break between each loop, but then the format should look like update:<br>
 ![loop settings](https://user-images.githubusercontent.com/61490904/215850429-3e171826-3193-4a7c-9468-c2f5de5a6092.JPG)<br>
 name: loop, loopDelay: (the pause in frames between each loop) <br>
 You only have to type in the line loopExternal: true, if the loop is external...  <br>
