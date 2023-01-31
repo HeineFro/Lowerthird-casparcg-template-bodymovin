@@ -37,13 +37,15 @@ If you need to update the template after the first load'n'play you have to add a
 So the update needs a delay so the text can animate out before the template updates, and it is possible to add that delay in the marker dialog. But the the format has to be changed a bit<br>
 ![update_settings](https://user-images.githubusercontent.com/61490904/215847891-a169c8ce-4eed-42a5-b9b3-87fc84e64bd0.JPG)<br>
 Instead of  "update", type name: update and on next line type updateDelay: (the delay in frames, in this case 5) <br>
+If there is a loop defined, it will ends its cycle, before the update animation runs.
 
 Loop animation<br>
 If you want a loop animation, you can make your loop as part of your timeline, just like play, stop, etc. Then right after play, the loop will start until stop is called. If you have a loop defined, and and you don't have need a have a update marker, the template will update when the loop plays. If stop is called, the loop will finish its cycle before the stop animation. <br>It is also possible to have a break between each loop, but then the format should look like update:<br>
 ![loop settings](https://user-images.githubusercontent.com/61490904/215850429-3e171826-3193-4a7c-9468-c2f5de5a6092.JPG)<br>
 name: loop, loopDelay: (the pause in frames between each loop) <br>
-You only have to type in loopExternal: true, if the loop is external.. <br>
-So if you want to have the
+You only have to type in the line loopExternal: true, if the loop is external...  <br>
+So if you want to have the loop as an external animation, you make the line: loopExternal: true<br>
+If you have the loop, external the update animation(if you have one, will be runing )
 
 
 
