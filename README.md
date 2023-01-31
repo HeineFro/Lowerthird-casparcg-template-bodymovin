@@ -71,9 +71,15 @@ For each font used, with a path typed in in the export, the template adds a “@
 
 I made a fonts folder in the template, so here the path is "./fonts/nameOfFont.ttf"
 
-This is just a example, a starting point. There is a lot way to do things different, to fit other kinds of templates. So let me know if there anything not working as it should or you have any questions about the templates.
+This is just a example, a starting point. There is a lot way to do things different, to fit other kinds of templates. So let me know if there anything not working as it should or you have any questions about the templates. heine.froholdt@gmail.com
 
-Further reading about bodymovin/lottie:<br>
+Further reading about bodymovin/lottie/casparcg:<br>
+CasparCG forum:<br>
+https://casparcgforum.org/
+
+Bodymovin:<br>
+https://github.com/airbnb/lottie-web/wiki/AfterEffects-Plugin-Information
+
 
 
 
