@@ -1,0 +1,32 @@
+Report created: 
+	1/31/2023	11:42:06 AM
+
+Project name: bodymovin_lowerthird_with_markers.aep
+
+Source files collected to: 
+	E:\CollectProjects\bodymovin_lowerthird_controlled_with_markers
+
+Source files collected: All
+
+Collected comps:  
+	Lower Third
+	bm_charHelper
+	bm_fontHelper
+	
+Number of collected files:  1
+
+Size of collected files:  62 KB
+
+Collected source files: 
+	E:\CollectProjects\bodymovin_lowerthird_with_markers folder\bodymovin_lowerthird_with_markers folder\(Footage)\casparlogo.png
+	
+Render output redirected to: 
+	E:\CollectProjects\bodymovin_lowerthird_controlled_with_markers\(bodymovin_lowerthird_with_markers Output)
+
+Rendering plug-ins:
+	Classic 3D
+	
+Layer:  Text Layer
+	External dependencies:  
+		Font family: “Myriad Web Pro”, Font style: “Bold”
+
