@@ -46,7 +46,7 @@ If you want a loop animation, you can make your loop as part of your timeline, j
 name: loop, loopDelay: (the pause in frames between each loop) <br>
 You only have to type in the line loopExternal: true, if the loop is external...  <br>
 So if you want to have the loop as an external animation, you make the line: loopExternal: true<br>
-If you have the loop, external the update animation(if you have one, will be runing )
+If you have the loop external, the update animation(if you have one) will update immediately, and the loop just keeps runinng.
 
 
 
