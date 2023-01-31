@@ -24,8 +24,15 @@ Here the names use are ".f0",".f1" & ".image" for the image, in the official Cas
 To determine which part of animation to play, some markers need to be put on the timeline.<br>
 ![timeline_framesa](https://user-images.githubusercontent.com/61490904/215841759-381487b5-e436-40df-a6ce-9373a2eeec37.JPG)<br>
 
-There has to be a "play" and a "stop". So set a marker on the first frame of the given part of the animation, and in the naming box type "play", and type in the duration.<br>
-![play](https://user-images.githubusercontent.com/61490904/215842190-422ef16d-9721-4511-923a-014128a5b825.JPG)
+There has to be a "play" and a "stop". They follow play and stop called from casparcg.
+So set a marker on the first frame of the given part of the animation, and in the naming box type "play"(if it's play), and type in the duration. <br>
+![play](https://user-images.githubusercontent.com/61490904/215842190-422ef16d-9721-4511-923a-014128a5b825.JPG)<br>
+
+Do the same for stop - So if your template only has to have the dynamic fields updated on load, and there is no loop animation in it, see the export section of this readme<br>
+
+
+
+
 
 
 
