@@ -1,4 +1,4 @@
-// version 1.03 template index made by heine.froholdt@gmail.com
+// version 1.04 template index made by heine.froholdt@gmail.com
 
 let isOn = false;
 let framesMilliseconds;
@@ -6,6 +6,7 @@ let fontsLoaded = false;
 let animLoaded = false;
 let animElementsLength;
 let markers = {}
+let markersLoop = {}
 
 //loop handling
 let loopExits = false;
@@ -39,7 +40,7 @@ const loadAnimation = (data, container) => {
     });
 }
 
-let anim = loadAnimation('data.json', animContainer)
+let anim = loadAnimation('data_all_included.json', animContainer)
 let externalLoop;
 
 //add font-face from data.json  
@@ -127,9 +128,15 @@ anim.addEventListener('config_ready', function (e) {
                 loopExternal = (res === 'true')
 
                 //handling of external loop
-                if (res) {
+                if (loopExternal) {
 
                     externalLoop = loadAnimation('loop.json', loopContainer)
+                    if (externalLoop.hasOwnProperty('markers')) {
+                        externalLoop.markers.forEach((item, index) => {
+                            markersLoop[item.payload.name] = item;
+                
+                        })
+                    }
                     externalLoop.addEventListener('complete', () => {
                         if (nextAnimation !== 'stop') {
                             loopRepeat = setTimeout(() => {
@@ -148,8 +155,12 @@ anim.addEventListener('config_ready', function (e) {
 
 
             })
-
-            loopDuration = markers['loop']['duration']
+            if(!loopExternal){
+                loopDuration = markers['loop']['duration']
+            } else {
+                loopDuration = markersLoop['loop']['duration']
+            }
+          
         }
     })
     //checking for a update animation in the animation 
@@ -194,6 +205,8 @@ webcg.on('data', function (data) {
                     loopAnimation = false;
                     nextAnimation = 'update'
                 }
+            } else if(!loopExternal && loopExits && anim.isPaused) {
+                anim.goToAndPlay('loop', true)
             }
 
             let imageElements = animContainer.getElementsByTagName("image");
