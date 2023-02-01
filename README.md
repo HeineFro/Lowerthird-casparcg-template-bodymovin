@@ -21,7 +21,7 @@ It´s the naming of the layers in After Effects that makes them dynamic in this 
 Dynamic text or images will have to start with a dot and then the layer name.<br>
 Here the names used are ".f0",".f1" & ".image" for the image, and to connect to those fields in the official CasparCG client, the key/values will look like this: <br>
 ![client - Copy](https://user-images.githubusercontent.com/61490904/215815595-ae321658-41fb-40f4-b73b-5a00ac42596e.jpg)<br>
-To test the image replacement, you can try to type "images/img_1.png" in the key: image
+To test the image replacement, you can try to type "images/img_0.png" in the key: image
 
 To determine which part of animation to play, some markers need to be put on the timeline in AE.<br>
 ![timeline_framesa](https://user-images.githubusercontent.com/61490904/215841759-381487b5-e436-40df-a6ce-9373a2eeec37.JPG)<br>
