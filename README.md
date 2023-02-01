@@ -43,17 +43,14 @@ If there is a loop defined, it will end its cycle before the update animation ru
 
 Loop animation<br>
 If you want a loop animation, you can make your loop part of your timeline, just like play, stop, etc.<br>![loop](https://user-images.githubusercontent.com/61490904/215852678-5abe4d43-8071-4fe2-be25-a5ef33b26059.gif)
-<br> Then, right after play, the loop will start until stop is called. If you have a loop defined, but no update marker, the template will update when the loop plays. If stop is called, the loop will finish its cycle before the stop animation. <br>It is also possible to have a break between each loop, but then the format should look like update:<br>
+<br> Then, right after play, the loop will start until stop is called. If you have a loop defined, but no update marker, the template will update when the loop plays and if its paused(loop delay) it will start right after the update is called. If stop is called, the loop will finish its cycle before the stop animation. <br>It is also possible to have a break between each loop, but then the format should look like update:<br>
 ![loop settings](https://user-images.githubusercontent.com/61490904/215850429-3e171826-3193-4a7c-9468-c2f5de5a6092.JPG)<br>
 "name: loop", "loopDelay: (the pause in frames between each loop)" <br>
-You only need to type loopExternal: true if the loop is external.
+You only need to type "loopExternal: true" if the loop is external.
 So if you want to have the loop as an external animation, you make the line: loopExternal: true<br>
 If you have the loop external, the update animation (if you have one) will update immediately, and the loop just keeps running, but if you stop it, the loop will finish first. <br>
 The external loop has to be named "loop.json", when you export it. And in that timeline, you will have to, at a minimum, put in a marker named: "loop", and set the duration of the loop. In this example, there is also a play and stop animation. <br>
 The loop delay is set at the loop marker in the main timeline.
-
-!!disclaimer!! This will be changed in an update<br>
-When there is a loop running and an update (if defined) is called, the template calculates how many frames are left in the loop's cycle and delays the update by the correct amount of time. But right now, that duration (only for the calculation) is taken from the main animation, so if you have an external loop, you will have to set the duration of the main loop marker and in the loop timeline, to the same time. <br>
 
 Export:<br>
 Export the animation and name it: data.json, and have all the js files from one of the templates in this repo and give it a spin. If you have any images, bodymovin will create a folder named: "images" and make a copy of the images used (this can be changed in bodymovin settings), and then lottie player will look for that folder/images, if the images are not dynamic. <br>
